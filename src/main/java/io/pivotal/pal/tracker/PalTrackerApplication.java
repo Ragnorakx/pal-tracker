@@ -3,8 +3,6 @@
  */
 package io.pivotal.pal.tracker;
 
-import javax.sql.DataSource;
-
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
