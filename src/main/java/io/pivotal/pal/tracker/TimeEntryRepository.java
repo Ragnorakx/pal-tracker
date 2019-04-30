@@ -9,13 +9,11 @@ public interface TimeEntryRepository {
 
     TimeEntry create(TimeEntry any);
 
-    TimeEntry find(long timeEntryId);
+    TimeEntry find(Long timeEntryId);
 
     List<TimeEntry> list();
 
-    TimeEntry update(long eq, TimeEntry any);
+    TimeEntry update(Long eq, TimeEntry any);
 
-    TimeEntry delete(long timeEntryId);
-
-    void empty();
+    void delete(Long timeEntryId);
 }

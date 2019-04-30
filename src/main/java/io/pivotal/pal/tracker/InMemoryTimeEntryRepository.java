@@ -19,7 +19,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
     }
 
     @Override
-    public TimeEntry find(long timeEntryId) {
+    public TimeEntry find(Long timeEntryId) {
         return repo.get(timeEntryId);
     }
 
@@ -29,7 +29,7 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
     }
 
     @Override
-    public TimeEntry update(long eq, TimeEntry entry) {
+    public TimeEntry update(Long eq, TimeEntry entry) {
         if(repo.get(eq) == null)
             return null;
         if(entry.getId() != eq)
@@ -39,14 +39,8 @@ public class InMemoryTimeEntryRepository implements TimeEntryRepository{
     }
 
     @Override
-    public TimeEntry delete(long timeEntryId) {
-        TimeEntry entry = repo.get(timeEntryId);
+    public void delete(Long timeEntryId) {
         repo.remove(timeEntryId);
-        return entry;
     }
 
-    @Override
-    public void empty() {
-        repo.clear();
-    }
 }
